@@ -21,7 +21,6 @@ protocol HeadLinesViewModel {
     func searchForArticle(by text: String)
     func checkLastCacheDate()
     func stopTimer()
-    func getTitle() -> String
 }
 
 class HeadLinesViewModelImplementation: HeadLinesViewModel {
@@ -97,10 +96,6 @@ class HeadLinesViewModelImplementation: HeadLinesViewModel {
                                           execute: requestWorkItem)
         }
     }
-    
-    func getTitle() -> String {
-        userFavorite.category.capitalized + " news in " + userFavorite.country
-    }
 }
 
 fileprivate extension HeadLinesViewModelImplementation {
@@ -120,10 +115,8 @@ fileprivate extension HeadLinesViewModelImplementation {
         } else {
             statePresenter?.render(state: .loading)
         }
-        let requestParameters = HeadlineArticleParameters(country: userFavorite.countryISO,
-                                                          category: userFavorite.category,
-                                                          page: pageNumber,
-                                                          query: searchText)
+        let requestParameters = HeadlineArticleParameters(country: userFavorite.countryISO, category: userFavorite.category, page: pageNumber, query: searchText)
+        
         dataSource.loadData(requestParameters: requestParameters) {[weak self] result in
             guard let self = self else { return }
             self.handleDataLoading(result: result, isRefresh: isRefresh)
