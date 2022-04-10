@@ -120,9 +120,9 @@ extension HeadlinesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detailsViewModel = DetailsViewModel(article: viewModel.getArticle(at: indexPath.row))
-//        let detailsViewController = DetailsViewController(viewModel: detailsViewModel)
-//        push(viewController: detailsViewController)
+        let detailsViewModel = DetailsViewModel(article: viewModel.getArticle(at: indexPath.row))
+        let detailsViewController = DetailsViewController(viewModel: detailsViewModel)
+        push(viewController: detailsViewController)
     }
 }
 
