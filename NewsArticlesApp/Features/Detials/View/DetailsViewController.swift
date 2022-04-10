@@ -33,11 +33,7 @@ class DetailsViewController: UIViewController {
         setupView()
     }
     
-    @IBAction private func backAction(_ sender: UIButton) {
-        pop()
-    }
-    
-    @IBAction private func openArticleAction(_ sender: UIButton) {
+    @IBAction private func expploreArticleAction(_ sender: UIButton) {
         viewModel.openArticleInSafari()
     }
 }

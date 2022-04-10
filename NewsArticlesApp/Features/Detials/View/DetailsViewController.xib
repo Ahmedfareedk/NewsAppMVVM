@@ -61,15 +61,30 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJU-Po-JkN">
+                    <rect key="frame" x="24" y="784" width="366" height="54"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Explore Article">
+                        <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="expploreArticleAction:" destination="-1" eventType="touchUpInside" id="Dv4-kR-EGV"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dJU-Po-JkN" secondAttribute="bottom" constant="24" id="2ur-Ci-rWh"/>
                 <constraint firstItem="LR5-pj-r7F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="7ow-5A-cDt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dJU-Po-JkN" secondAttribute="trailing" constant="24" id="9Ni-85-VHt"/>
                 <constraint firstItem="i4B-p2-K61" firstAttribute="leading" secondItem="8w5-ud-tms" secondAttribute="leading" id="DK1-MY-Kt4"/>
                 <constraint firstItem="QlO-Kw-GoK" firstAttribute="top" secondItem="i4B-p2-K61" secondAttribute="bottom" constant="34" id="DjC-B1-Oy7"/>
                 <constraint firstItem="QlO-Kw-GoK" firstAttribute="leading" secondItem="i4B-p2-K61" secondAttribute="leading" id="Dje-0Y-JHq"/>
                 <constraint firstItem="LR5-pj-r7F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Du8-zB-wNW"/>
+                <constraint firstItem="dJU-Po-JkN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="GQT-xn-06s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xw2-l0-z2G" secondAttribute="trailing" constant="24" id="H9g-pt-nT8"/>
                 <constraint firstItem="HWx-NS-KYZ" firstAttribute="top" secondItem="i4B-p2-K61" secondAttribute="top" id="HVS-IB-Uep"/>
                 <constraint firstItem="HWx-NS-KYZ" firstAttribute="leading" secondItem="i4B-p2-K61" secondAttribute="trailing" constant="24" id="PiI-8e-vTD"/>
@@ -80,6 +95,7 @@
                 <constraint firstItem="8w5-ud-tms" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bcC-PJ-uh1"/>
                 <constraint firstItem="i4B-p2-K61" firstAttribute="top" secondItem="8w5-ud-tms" secondAttribute="bottom" constant="35" id="oUr-Pv-5nh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LR5-pj-r7F" secondAttribute="trailing" constant="12" id="pjL-Qw-O5j"/>
+                <constraint firstItem="dJU-Po-JkN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="qCw-9Q-XGt"/>
                 <constraint firstItem="Xw2-l0-z2G" firstAttribute="top" secondItem="QlO-Kw-GoK" secondAttribute="bottom" constant="24" id="qha-k1-LKs"/>
                 <constraint firstItem="BsV-Z0-QHr" firstAttribute="top" secondItem="8w5-ud-tms" secondAttribute="top" id="zWI-hC-UTZ"/>
             </constraints>
@@ -89,6 +105,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
