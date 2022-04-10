@@ -59,6 +59,12 @@ fileprivate extension DetailsViewController {
         let safari = SFSafariViewController(url: url)
         present(safari, animated: true)
     }
+    
+    @IBAction private func backAction(_ sender: UIButton) {
+        pop()
+    }
+    
+    
 }
 
 extension DetailsViewController: StatePresentable {
