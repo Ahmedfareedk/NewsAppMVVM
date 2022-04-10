@@ -35,17 +35,13 @@ class ApiHandler: ApiHandlerProtocol {
 }
 
 private extension ApiHandler {
-
-    func getRequestData(request: Requestable) -> DataRequest {
-        let requestData = AF.request(request.baseURL + request.path,
-                                     method: request.method,
-                                     parameters: request.parameters,
-                                     encoding: request.encoding,
-                                     headers: request.headers)
     
+    func getRequestData(request: Requestable) -> DataRequest {
+        let requestData = AF.request(request.baseURL + request.path, method: request.method, parameters: request.parameters, encoding: request.encoding, headers: request.headers)
+        
         return requestData
     }
-
+    
     func handleResponse<T: Decodable> (response: AFDataResponse<Any>, mappingClass: T.Type) -> Result<T, Error> {
         guard let jsonResponse = response.data else {
             return .failure(ErrorHandler.generalError)

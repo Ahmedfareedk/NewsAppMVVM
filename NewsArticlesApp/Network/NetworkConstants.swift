@@ -8,7 +8,7 @@
 import Foundation
 
 enum NetworkConstants {
-    static let apiKey = "4b3e5eefa4294f0981ac15e1adf41ad1"
+    static let apiKey = "aa4fba52b13d4139a860cbb82f0cc8f5"
     static let baseURL = "https://newsapi.org/v2/"
     static let topHeadlines = "top-headlines"
 }
