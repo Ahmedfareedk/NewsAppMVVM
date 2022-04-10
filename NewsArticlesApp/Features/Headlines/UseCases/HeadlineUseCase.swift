@@ -10,11 +10,11 @@ import Foundation
 typealias ArticleResult = Result<ArticleResponse, Error>
 typealias ArticleBlock = (ArticleResult) -> Void
 
-protocol HomeDataProviderUseCase {
+protocol HeadLinesDataProviderUseCase {
     func loadData(requestParameters: HeadlineArticleParameters, completion: ArticleBlock?)
 }
 
-class HomeDataProvider: HomeDataProviderUseCase {
+class HeadLinesDataProvider: HeadLinesDataProviderUseCase {
     
     var apiHandler: ApiHandlerProtocol
     

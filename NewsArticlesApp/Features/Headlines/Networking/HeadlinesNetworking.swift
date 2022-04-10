@@ -35,8 +35,7 @@ extension HeadlinesNetworking: Requestable {
         switch self {
             
         case .fetchArticles(let params):
-//            return params.toJSON()
-            return [:] //amr
+          return params.toJSON()
         }
     }
     

@@ -26,7 +26,7 @@ protocol HeadLinesViewModel {
 class HeadLinesViewModelImplementation: HeadLinesViewModel {
     
     private let userFavorite: UserFavoriteCategoryAndCountry
-    private let dataSource: HomeDataProviderUseCase
+    private let dataSource: HeadLinesDataProviderUseCase
     private var articles = [Article]()
     private var searchedArticles = [Article]()
     private var pageNumber: Int = 1
@@ -37,7 +37,7 @@ class HeadLinesViewModelImplementation: HeadLinesViewModel {
     
     var statePresenter: StatePresentable?
     
-    init(userFavorite: UserFavoriteCategoryAndCountry, dataSource: HomeDataProviderUseCase) {
+    init(userFavorite: UserFavoriteCategoryAndCountry, dataSource: HeadLinesDataProviderUseCase) {
         self.userFavorite = userFavorite
         self.dataSource = dataSource
     }
