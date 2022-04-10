@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeadlinesViewController" customModule="NewsArticlesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="headLinesIndicator" destination="1XA-jI-NmC" id="18P-vo-3fg"/>
+                <outlet property="headLinesSearchBar" destination="QNk-19-EcI" id="nem-GH-ttB"/>
+                <outlet property="headLinesTableView" destination="hlh-SI-0fR" id="Kpz-Vl-DE6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QNk-19-EcI" customClass="CustomSearchBar" customModule="NewsArticlesApp" customModuleProvider="target">
+                    <rect key="frame" x="16" y="52" width="382" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="r5H-TH-irf"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hlh-SI-0fR">
+                    <rect key="frame" x="8" y="124" width="398" height="730"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-jI-NmC">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <color key="tintColor" systemColor="systemTealColor"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QNk-19-EcI" secondAttribute="trailing" constant="16" id="4Nf-Mj-HcQ"/>
+                <constraint firstItem="hlh-SI-0fR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Gf3-rs-9gi"/>
+                <constraint firstItem="1XA-jI-NmC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="PhO-M8-tPF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hlh-SI-0fR" secondAttribute="trailing" constant="8" id="dog-qP-296"/>
+                <constraint firstItem="QNk-19-EcI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="fJy-4Y-ef6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hlh-SI-0fR" secondAttribute="bottom" constant="8" id="hyv-Uv-BIw"/>
+                <constraint firstItem="hlh-SI-0fR" firstAttribute="top" secondItem="QNk-19-EcI" secondAttribute="bottom" constant="8" id="kl0-Q1-m1T"/>
+                <constraint firstItem="1XA-jI-NmC" firstAttribute="centerX" secondItem="hlh-SI-0fR" secondAttribute="centerX" id="ppJ-1b-csS"/>
+                <constraint firstItem="QNk-19-EcI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qdH-no-jGl"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="38"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
