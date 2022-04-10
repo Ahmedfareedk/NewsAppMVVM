@@ -26,15 +26,16 @@ class OnboardingViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - View LifeCycle
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.statePresenter = self
         setupView()
     }
     
-    //MARK: - Actions
+  
     @IBAction private func startAction(_ sender: UIButton) {
+        print("Hey")
         viewModel.startHeadlines()
     }
 }
@@ -63,11 +64,9 @@ fileprivate extension OnboardingViewController {
     
     func navigateToHome() {
         guard let userFavorite = viewModel.userFavorite else { return }
-//        let homeViewModel = HomeViewModel(userFavorite: userFavorite, dataSource: HomeDataProvider())
-//        let homeViewController = HomeViewController(viewModel: homeViewModel)
-//        setRootViewController(to: homeViewController)
-        //amr
-    }
+        let headLinesViewModel = HeadLinesViewModelImplementation(userFavorite: userFavorite, dataSource: HeadLinesDataProvider())
+        let headLineViewController = HeadlinesViewController(viewModel: headLinesViewModel)
+        setRootViewController(to: headLineViewController)}
 }
 
 extension OnboardingViewController: StatePresentable {
